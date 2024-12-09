@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
-import reslist from "../utils/mockData";
+import { reslist } from "../utils/mockData";
 import { useEffect, useState } from "react";
-import reslist from "../utils/mockData";
+import BodyShimmer from "./BodyShimmer";
 
 
 
@@ -10,20 +10,24 @@ import reslist from "../utils/mockData";
 const Body = () =>{
   let [listofRestaurants, setListofRestaurants] =useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
+      fetchData();
+      },[] );
+    
+
     const fetchData = async () => {
       const response = await fetch('https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.45970&lng=77.02820&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
       const json = await response.json(); 
       const restaurants = (json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      setListofRestaurants(restaurants);
       console.log(restaurants);
+      setListofRestaurants(restaurants);
 
     };
 
-    fetchData();
-  }, []);
-
-  
+   if(listofRestaurants.length===0){
+    return <BodyShimmer/>;
+   }
+    
     return(
       
       <div className="body">

@@ -35,9 +35,13 @@
     margin: 5px;
     padding: 5px;
     width: 200px;
-    height: 347px;
     background-color:#C1DADF;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;  
 }
+
 .res-card:hover{
     border: 1px solid black;
     cursor: pointer;
@@ -56,4 +60,18 @@
     margin: 10px;
     color: blue;
     cursor: pointer;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    width: 200px;
+    margin:5px;
+    height: 400px;
+    padding: 5px;
+    background-color: #f0f0f0;
+
 }

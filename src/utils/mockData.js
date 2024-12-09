@@ -1,4 +1,4 @@
-const reslist =
+export const reslist =
 [
         {
         
@@ -509,5 +509,14 @@ const reslist =
       
  
 ]
+
+export const imageUrls = {
+  loMein: "https://christieathome.com/wp-content/uploads/2023/09/Chinese-Lo-Mein13.jpg",
+  restaurantImage: "https://tblg.k-img.com/restaurant/images/Rvw/136986/640x640_rect_136986025.jpg",
+  snacksAndTea: "https://img.freepik.com/free-photo/sweet-snacks-cup-tea_114579-5800.jpg?t=st=1733724097~exp=1733727697~hmac=6beeb4f8f325724625c9e09b96bbd982718f2a7e20caf51fe16f9936530e3c59&w=900",
+  foodPreparation: "https://www.pjponline.com/wp-content/uploads/2019/02/shutterstock_483203188-1024x683.webp",
+  pizza:"https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/pizza-recipe.jpg",
+  biryani:"https://www.shutterstock.com/shutterstock/photos/2468105649/display_1500/stock-photo--chicken-biryani-quick-and-tasty-chicken-biryani-chicken-dum-biryani-plan-background-2468105649.jpg",
+
+};
  
-export default reslist;
