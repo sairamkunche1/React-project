@@ -1,21 +1,27 @@
 import { imageUrls } from "../utils/mockData";
+import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard =(props)=>{
     const {resData}= props;
     if (!resData || !resData.info) {
       return <div>Error: Data is missing</div>;
     }
-    const {name,avgRating,cuisines,sla,cloudinaryImageId} = resData?.info;
-    //const imageUrl = cloudinaryImageId ? `https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/${cloudinaryImageId}`: '';
-    //const imageUrl = "https://via.placeholder.com/320";
-    const imageUrl="https://www.shutterstock.com/shutterstock/photos/2468105649/display_1500/stock-photo--chicken-biryani-quick-and-tasty-chicken-biryani-chicken-dum-biryani-plan-background-2468105649.jpg";
+    const {name,avgRating,cuisines,sla,
+      cloudinaryImageId,
+      costForTwo
+      } = resData?.info;
 
     return(
       <div className="res-card"> 
-         {imageUrl ? <img className="res-logo" alt="res-logo" src={imageUrl} /> : <div>No image available</div>}
+         <img
+        className="res-logo"
+        alt="res-logo"
+        src={CDN_URL+cloudinaryImageId}
+      />
          <h3 style={{ textAlign: "center" }}>{name}</h3>
         <h4>{cuisines.join(" ,")}</h4>
         <h4>{avgRating}</h4>
+        <h4>{costForTwo}</h4>
         <h4>{sla.deliveryTime} min</h4>
       </div>
     )
