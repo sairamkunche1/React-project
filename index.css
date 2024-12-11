@@ -1,5 +1,6 @@
 .app{
     background-color: white;
+    
 }
 
 
@@ -8,7 +9,7 @@
     justify-content: space-between;
     cursor: pointer;
     border: 1px solid black;
-    background-color: white;
+    background-color:cadetblue;
 }
 
 .logo{
@@ -32,7 +33,7 @@
     flex-wrap: wrap;
 }
 .res-card{
-    margin: 5px;
+    margin: 8px;
     padding: 5px;
     width: 200px;
     background-color:#C1DADF;
@@ -54,12 +55,14 @@
     
 }
 .body{
-    background-color: white;
+    background-color:cadetblue;
 }
 .filter-btn{
-    margin: 10px;
+    margin: 11px;
     color: blue;
     cursor: pointer;
+    padding: 0px 6px;
+    font-size: medium;
 }
 
 .shimmer-container{
@@ -73,5 +76,32 @@
     height: 400px;
     padding: 5px;
     background-color: #f0f0f0;
+
+}
+
+.ac-btn-name{
+    font-size: large;
+    color: black;
+    background-color: ghostwhite;
+    padding: 0px 19px;
+    border-radius: 13px;
+    height: 42px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;  
+    justify-content: space-between;
+}
+.search-btn{
+    cursor: pointer;
+    font-size: large;
+    border-radius: 8px;
+    background-color: ghostwhite;
+    
+}
+.search-box{
+    padding: 4px;
+    margin-right: 10px;
 
 }
