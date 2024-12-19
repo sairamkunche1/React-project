@@ -44,7 +44,8 @@
 }
 
 .res-card:hover{
-    border: 1px solid black;
+    transform: translateY(-5px); /* Add a hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 .search{
@@ -55,14 +56,16 @@
     
 }
 .body{
-    background-color:cadetblue;
+    background-color:rgb(255, 255, 255);
 }
 .filter-btn{
     margin: 11px;
-    color: blue;
+    color: black;
+    background-color: ghostwhite;
     cursor: pointer;
     padding: 0px 6px;
     font-size: medium;
+    border-radius: 8px;
 }
 
 .shimmer-container{
@@ -103,5 +106,76 @@
 .search-box{
     padding: 4px;
     margin-right: 10px;
-
+    border-style: ridge;
 }
+.Restaurant-List{
+    display: flex;
+}
+
+.menu-card {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    justify-content: space-around; /* Space between rows and align items */
+    gap: 16px; /* Space between cards */
+    padding: 16px;
+    background-color: #f9f9f9;
+}
+
+.image-class {
+    width: 100%;
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+    max-height: 406px; /* Prevents the image from exceeding the desired height */
+    object-fit: cover; /* Crops the image to fit its container neatly */
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.res-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0; /* Add a border around each card */
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    width: 250px; /* Set a consistent width for all cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visuals */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-list:hover {
+    transform: translateY(-5px); /* Add a hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.res-list h2 {
+    font-size: 18px;
+    color: #0c0101;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.res-list h3 {
+    font-size: 16px;
+    color: #e00a0a;
+    margin: 4px 0;
+}
+
+
+.res-list h2 {
+    color: #141110;
+}
+
+.res-name-class {
+    text-align: center;
+    margin: 20px 0; 
+    margin-left: 57px;
+    font-size: 32px; 
+    font-weight: bold; 
+  }
+
+
+

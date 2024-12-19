@@ -51,3 +51,9 @@ nammed import---- import {name of var}  from path;
 
 useState() --- Superpowerful state variables in JS
 useEffect()---
+
+# 2 types of Routing in web pages
+ 
+  1 Clinet side routing
+  2 Server side routing
+  

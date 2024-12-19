@@ -12,12 +12,13 @@ const Body = () =>{
     useEffect(() => {
       fetchData();
       },[] );
-    
-
+  
     const fetchData = async () => {
       const response = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING');
       const json = await response.json(); 
-      const restaurants = (json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      console.log("json",json);
+      const restaurants = ( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      console.log(restaurants);
       setListofRestaurants(restaurants);
       setFilteredRestaurants(restaurants);
 
@@ -25,7 +26,7 @@ const Body = () =>{
 
    
     
-    return listofRestaurants.length===0 ? (<BodyShimmer/>) :(
+    return listofRestaurants && listofRestaurants.length === 0? (<BodyShimmer/>) :(
       
       <div className="body">
         <div className="filter">
@@ -47,12 +48,13 @@ const Body = () =>{
 
         </div>
          <div className="res-container">
-      { 
-        filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))
-       
-      }
+         {Array.isArray(filteredRestaurants) && filteredRestaurants.length > 0 ? (
+          filteredRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          ))
+        ) : (
+          <p>No restaurants available</p>
+        )}
       </div>
         
       </div>
