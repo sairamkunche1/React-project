@@ -3,13 +3,12 @@
     
 }
 
-
 .header {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     border: 1px solid black;
-    background-color:cadetblue;
+    background-color:ghostwhite;
 }
 
 .logo{
@@ -25,18 +24,26 @@
     padding: 10px;
     margin: 7px;
     color: black;
-
-    
 }
 .res-container{
     display: flex;
     flex-wrap: wrap;
 }
+
+.res-list-div{
+    margin-left: 39px;
+    
+}
 .res-card{
-    margin: 8px;
-    padding: 5px;
-    width: 200px;
-    background-color:#C1DADF;
+    background-color: #C1DADF;
+    padding: 15px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center; 
+    width: 237px;
     display: flex;
     flex-direction: column;
     overflow-wrap: break-word; 
@@ -53,10 +60,27 @@
 }
 .res-logo{
     width: 100%;
+    height: auto;
+    border-radius: 4px;
     
 }
+
+.res-card-data h3 {
+    font-size: 21px; 
+    font-weight: 600; 
+    margin: 10px 0;
+    text-align: center;
+    color: black; 
+  }
+  .res-card-data h4 {
+    font-size: 16px; 
+    margin: 12px 0; 
+    text-align: center;
+    color:#333333; 
+  }
+
 .body{
-    background-color:rgb(255, 255, 255);
+    background-color:cadetblue;
 }
 .filter-btn{
     margin: 11px;
@@ -115,17 +139,17 @@
 .menu-card {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of items */
-    justify-content: space-around; /* Space between rows and align items */
-    gap: 16px; /* Space between cards */
+    justify-content: space-around; 
+    gap: 16px; 
     padding: 16px;
-    background-color: #f9f9f9;
+    
 }
 
 .image-class {
     width: 100%;
-    height: auto; /* Automatically adjusts height to maintain aspect ratio */
-    max-height: 406px; /* Prevents the image from exceeding the desired height */
-    object-fit: cover; /* Crops the image to fit its container neatly */
+    height: auto; 
+    max-height: 406px; 
+    object-fit: cover; 
     border-radius: 8px;
     margin-bottom: 12px;
 }
@@ -133,21 +157,22 @@
 .res-list {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
     text-align: center;
     background-color: #ffffff;
-    border: 1px solid #e0e0e0; /* Add a border around each card */
+    border: 1px solid #e0e0e0; 
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 14px;
+    margin-right: 39px;
     cursor: pointer;
-    width: 250px; /* Set a consistent width for all cards */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visuals */
+    width: 296px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .res-list:hover {
-    transform: translateY(-5px); /* Add a hover effect */
+    transform: translateY(-5px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -176,6 +201,20 @@
     font-size: 32px; 
     font-weight: bold; 
   }
+
+  .menu-div {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    height: 100vh; 
+    margin: 0 auto; 
+    padding: 0;
+}
+
+
+
 
 
 

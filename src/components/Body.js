@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { reslist } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import BodyShimmer from "./BodyShimmer";
+import { Link } from "react-router-dom";
 
 
 const Body = () =>{
@@ -50,7 +51,13 @@ const Body = () =>{
          <div className="res-container">
          {Array.isArray(filteredRestaurants) && filteredRestaurants.length > 0 ? (
           filteredRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+            <Link 
+            key={restaurant.info.id} 
+            style={{ textDecoration: "none", color: "inherit" }}
+             className="res-card-link"
+            to={"/restaurant/"+ restaurant.info.id}>
+            <RestaurantCard  resData={restaurant} />
+            </Link>
           ))
         ) : (
           <p>No restaurants available</p>

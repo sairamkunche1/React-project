@@ -12,9 +12,9 @@ const Header = () =>{
       </div>
       <div className="nav-items">
         <ul>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/about"}>About Us</Link></li>
-          <li><Link to={"/contact"}>Contact Us</Link></li>
+          <li><Link style={{textDecoration:"none",color:"black"}} to={"/"}>Home</Link></li>
+          <li><Link style={{textDecoration:"none",color:"black"}} to={"/about"}>About Us</Link></li>
+          <li><Link style={{textDecoration:"none",color:"black"}} to={"/contact"}>Contact Us</Link></li>
           <li>Cart</li>
           <button className="ac-btn-name" onClick={()=>{
             btnName ==="Login" ? setbtnName("Logout") : setbtnName("Login");
