@@ -3,9 +3,9 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard =(props)=>{
     const {resData}= props;
-    if (!resData || !resData.info) {
-      return <div>Error: Data is missing</div>;
-    }
+    // if (!resData || !resData.info) {
+    //   return <div>Error: Data is missing</div>;
+    // }
     const {name,avgRating,cuisines,sla,
       cloudinaryImageId,
       costForTwo

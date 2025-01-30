@@ -8,11 +8,13 @@
     justify-content: space-between;
     cursor: pointer;
     border: 1px solid black;
-    background-color:ghostwhite;
+    background-color:rgb(255, 82, 0);
 }
 
 .logo{
     width: 197px;
+    margin-top: 23px;
+    margin-left: 12px;
 }
 .nav-items > ul{
     display: flex;
@@ -35,7 +37,7 @@
     
 }
 .res-card{
-    background-color: #C1DADF;
+    
     padding: 15px;
     border-radius: 8px;
     margin-left: 20px;
@@ -80,7 +82,7 @@
   }
 
 .body{
-    background-color:cadetblue;
+    background-color:ghostwhite;
 }
 .filter-btn{
     margin: 11px;
@@ -118,7 +120,7 @@
 }
 .filter{
     display: flex;  
-    justify-content: space-between;
+     justify-content: end; 
 }
 .search-btn{
     cursor: pointer;
@@ -212,6 +214,15 @@
     margin: 0 auto; 
     padding: 0;
 }
+
+.contact-div {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Ensure the divs are on opposite sides */
+    align-items: center; /* Vertically align the items */
+    padding: 10px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+}
+
 
 
 

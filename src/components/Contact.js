@@ -1,9 +1,17 @@
 const Contact = ()=> {
     return(
-        <div>
-            <h1>This is Contact us page</h1>
-            <h3>App Creator--SAIRAM</h3>
+        <div className="contact-div">
+            <div>
+                <h1>Customer Support</h1>
+                <h2>Email:support1@swiggy.in</h2>
+            </div>
+
+            <div>
+                <input type="search-box"></input>
+                <input type="search-box"></input>
+            </div>
         </div>
+       
     )
 }
 
