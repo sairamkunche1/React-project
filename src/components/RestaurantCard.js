@@ -12,10 +12,10 @@ const RestaurantCard =(props)=>{
       } = resData?.info;
 
     return(
-      <div className="res-list-div">
+      <div className="ml-15">
         <div className="res-card"> 
               <img
-                  className="res-logo"
+                  className="rounded-lg"
                   alt="res-logo"
                   src={CDN_URL+cloudinaryImageId}
               />
