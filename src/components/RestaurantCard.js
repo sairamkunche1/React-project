@@ -6,7 +6,8 @@ const RestaurantCard =(props)=>{
     // if (!resData || !resData.info) {
     //   return <div>Error: Data is missing</div>;
     // }
-    const {name,avgRating,cuisines,sla,
+    const {name,avgRating, 
+      areaName,cuisines,sla,
       cloudinaryImageId,
       costForTwo
       } = resData?.info;
@@ -25,6 +26,7 @@ const RestaurantCard =(props)=>{
                   <h4>{cuisines.join(",")}</h4>
                   <h4>{avgRating ? `⭐ ${avgRating}` : null}</h4>    
                   <h4>{sla.deliveryTime} min</h4>
+                  <h4>{areaName}</h4>
               </div>
         </div>
       </div>
