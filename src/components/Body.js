@@ -21,7 +21,7 @@ const Body = () =>{
       const json = await response.json(); 
      // console.log("json",json);
       const restaurants = ( json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-      //console.log(restaurants);
+     // console.log("data",restaurants);
       setListofRestaurants(restaurants);
       setFilteredRestaurants(restaurants);
 

@@ -13,8 +13,11 @@ const ItemList = ({ items }) => {
                     </div>
                     <img src={CDN_URL + item.card.info.imageId} className="w-28 rounded-lg"></img>
             </div>
-            <button type="text" className="cursor-pointer float-right mr-7 bg-red-500 rounded-lg px-1">ADD</button>
-            { <p className="text-xs">{item.card.info.description}</p>}
+            <button type="button" className="cursor-pointer float-right mr-7 bg-white text-green-500 rounded-lg px-4 py-2 text-sm font-semibold shadow-sm hover:bg-green-50">
+                  ADD
+            </button>
+
+            { <p className="text-xs pt-2">{item.card.info.description}</p>}
           
             
           </div>
