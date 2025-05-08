@@ -3,12 +3,14 @@ import BodyShimmer from "./BodyShimmer";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constants";
-import RestaurantCategory from "./RestaurantCategory";
+import Accordion from "./Accordion";
 const RestaurantMenu = () =>{
 
     const [resinfo, setresinfo] = useState(null);
 
     const {resId} = useParams();
+
+    const[showIndex , setShowIndex] = useState();
     
 
     useEffect(()=>{
@@ -63,10 +65,15 @@ const RestaurantMenu = () =>{
           {/* */}
         <div className="w-full ml-10 flex justify-start">
           <div className="w-fit">
-            {categories.map((category) => (
-              <RestaurantCategory
+            {categories.map((category,index) => (
+              <Accordion
                 key={category?.card?.card?.title}
                 data={category?.card?.card}
+                showItems={index === showIndex}
+                setShowIndex={setShowIndex}
+                index={index}
+                showIndex={showIndex}
+               
               />
             ))}
           </div>

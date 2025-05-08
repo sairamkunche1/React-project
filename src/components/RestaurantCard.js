@@ -6,6 +6,7 @@ const RestaurantCard =(props)=>{
     // if (!resData || !resData.info) {
     //   return <div>Error: Data is missing</div>;
     // }
+   // console.log("resdata",resData);
     const {name,avgRating, 
       areaName,cuisines,sla,
       cloudinaryImageId,
