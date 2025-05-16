@@ -52,47 +52,61 @@ const Body = () =>{
     
     return listofRestaurants && listofRestaurants.length === 0? (<BodyShimmer/>) :(
       
-      <div className="body">
-
-      <div className="flex justify-center items-center h-80 bg-gray-100">
-      <img src={food} alt="Food Banner" className="w-[600px] h-auto rounded-lg" />
-      </div>
-
-         <div className=" pt-3 ">
-              <MiniCarousel carouseldata={menuList} />
-          </div>
-        <div className="filter">
-          
-         {/* <button className="filter-btn" onClick={()=>{
-            const filteredList=listofRestaurants.filter((res) =>res.info.avgRating>4.3);
-            setListofRestaurants(filteredList);
-          }}>
-            Top Rated Restaurants
-          </button> */}
-          <div className="m-4 p-4">
-            <input type="text"  className="border border-solid border-black" value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
-            <button className=" cursor-pointer  bg-green-300 rounded-lg ml-2 px-4" onClick={()=>{
-              const filteredRestaurants= listofRestaurants.filter((resData)=>resData.info.name.toLowerCase().includes(searchText.toLowerCase()));
-              setFilteredRestaurants(filteredRestaurants);
-            }}>Search</button>
-         </div>
+     <div className="body bg-gray-50 p-4">
+      
+        {/* Banner Section */}
+        <div className="flex justify-center items-center h-60 bg-gradient-to-r from-blue-50 to-purple-50 mb-6">
+          <img 
+            src={food} 
+            alt="Food Banner" 
+            className="w-full max-w-4xl h-full object-cover rounded-lg" 
+          />
         </div>
 
+        {/* Carousel */}
+        <div className="pt-3  mb-6">
+          <MiniCarousel carouseldata={menuList} />
+        </div>
 
+        {/* Search Filter */}
+        <div className="flex justify-end mb-2 py-3 bg-white">
+          <div className="flex items-end bg-white p-2 rounded-lg  border border-gray-200">
+            <input
+              type="text"
+              className="border-0 focus:ring-2 focus:ring-blue-500 rounded-md px-4 py-2 w-64 outline-none"
+              placeholder="Search restaurants..."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <button
+              className="ml-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              onClick={() => {
+                const filteredRestaurants = listofRestaurants.filter((resData) =>
+                  resData.info.name.toLowerCase().includes(searchText.toLowerCase())
+                );
+                setFilteredRestaurants(filteredRestaurants);
+              }}
+            >
+              Search
+            </button>
+          </div>
+        </div>
 
-         <div className="flex flex-wrap">
-         {Array.isArray(filteredRestaurants) && filteredRestaurants.length > 0 ? (
-          filteredRestaurants.map((restaurant) => (
+        {/* Restaurant Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {Array.isArray(filteredRestaurants) && filteredRestaurants.length > 0 ? (
+            filteredRestaurants.map((restaurant) => (
             <Link key={restaurant.info.id}  style={{ textDecoration: "none", color: "inherit" }} className="res-card-link" to={"/restaurant/"+ restaurant.info.id}>
-            <RestaurantCard  resData={restaurant} />
-            </Link>
-          ))
-        ) : (
-          <p>No restaurants available</p>
-        )}
-      </div>
-        
-      </div>
+                  <RestaurantCard  resData={restaurant} />
+                  </Link>
+            ))
+          ) : (
+            <div className="col-span-full text-center py-8">
+              <p className="text-gray-500">No restaurants found.</p>
+            </div>
+          )}
+        </div>
+</div>
     );
   }
 

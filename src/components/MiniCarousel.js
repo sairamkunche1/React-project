@@ -24,10 +24,10 @@ const MiniCarousel = (props) =>{
       <div className="p-2">
           <div className="w-full bg-gray-100">
             
-          <div className="flex justify-between items-center w-full mb-2 absolute">
+          <div className="flex justify-between items-center w-full mb-2  absolute">
                <h1 className="text-2xl font-semibold mr-4 text-black">What's on your mind?</h1>
     
-              <div className="flex space-x-2 mt-3 mr-5">
+              <div className="flex space-x-2 mt-3 mr-14">
                 <button onClick={handlePrev} disabled={startIndex === 0}
                   className="bg-gray-200 text-black font-bold text-2xl w-8 h-8 cursor-pointer rounded-full flex items-center justify-center disabled:opacity-50"
                 >

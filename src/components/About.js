@@ -6,11 +6,11 @@ const About = () => {
         <div className="about-us bg-white text-gray-800 min-h-screen">
             <section className="py-16 px-4 sm:px-8 md:px-16 bg-gradient-to-b from-indigo-100 to-white text-center relative overflow-hidden">
                 <div className="max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 font-serif">
+                    <h2 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4 font-serif">
                         About <span className="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
                         EatEasy
                         </span>
-                    </h1>
+                    </h2>
                     <p className="text-lg md:text-xl text-gray-600 font-medium max-w-2xl italic mx-auto">
                     "Delivering joy, not just food"
                     </p>
@@ -316,8 +316,6 @@ const About = () => {
         </div>
     );
 };
-
-
 
 
 
