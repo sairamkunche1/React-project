@@ -8,7 +8,7 @@ import About from "./components/About";
 import Error from "./components/Error";
 import { createBrowserRouter,RouterProvider ,Outlet} from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
-import { Suspense } from "react";
+
  
 const Contact = lazy(()=> import("./components/Contact"));       // Lazy Loaded the Contact Page
 
