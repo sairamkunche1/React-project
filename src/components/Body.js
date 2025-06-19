@@ -70,6 +70,7 @@ const Body = () =>{
 
         {/* Search Filter */}
         <div className="flex justify-end mb-2 py-3 bg-white">
+           <Link className=" font-semibold pl-2 py-4 pr-7" to="/products">Products</Link>
           <div className="flex items-end bg-white p-2 rounded-lg  border border-gray-200">
             <input
               type="text"
