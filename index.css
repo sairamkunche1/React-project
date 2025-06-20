@@ -27,6 +27,18 @@
     width: 200px;
     height: 200px;
 }
+.page-number{
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+    
+
+}
+.active-class{
+    background-color:aqua;
+}
 .header {
     display: flex;
     justify-content: space-between;
